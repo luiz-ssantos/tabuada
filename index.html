@@ -4,43 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="main.css" />
-    <title>Contador</title>
+    <title>Tabuada</title>
   </head>
   <body>
     <header>
-      <h1>Vamos Contar</h1>
+      <h1>Tabuada</h1>
     </header>
     <main>
       <div>
         <form action="">
-          <label for="inicioContador">Inicio:</label>
+          <label for="numeroTabuada">NUMERO:</label>
+          <br>
           <input
             type="number"
-            name="inicioContador"
-            id="inicioContador"
-            placeholder="Numero para iniciar..."
+            name="numeroTabuada"
+            id="numeroTabuada"
+            placeholder="Digite o numero..."
           />
           <br />
-          <label for="fimContador">Fim: </label>
-          <input
-            type="number"
-            name="fimContador"
-            id="fimContador"
-            placeholder="Numero para finalizar..."
-          />
-          <br />
-          <label for="saltoContador">Passo: </label>
-          <input
-            type="number"
-            name="saltoContador"
-            id="saltoContador"
-            placeholder="Valor do salto.."
-          />
-        </form>
-        <button type="submit" id="butaoContar">CONTAR</button>
+          <button type="submit" id="butaoGerar">Gerar Tabuada</button>
+          <br>
+          <textarea name="resultadoTabuada" id="resultadoTabuada" cols="30" rows="10" placeholder="Digite um numero acima.."></textarea>
       </div>
       <div id="resultadoDiv">
-        <p id="resultado">Preparando a contagem...</p>
+        <p id="resultado">Preparando a Tabuada...</p>
       </div>
     </main>
     <footer>

@@ -1,35 +1,33 @@
-var butaoContar = window.document.getElementById("butaoContar");
+var butaoGerar = document.getElementById("butaoGerar");
 
-butaoContar.addEventListener("click", funcaoContar);
+butaoGerar.addEventListener("click", function (event) {
+  event.preventDefault();
+  funcaoGerar();
+});
 
-function funcaoContar() {
-  var inicioContador = parseInt(
-    window.document.getElementById("inicioContador").value
-  );
-  var fimContador = parseInt(
-    window.document.getElementById("fimContador").value
-  );
-  var saltoContador = parseInt(
-    window.document.getElementById("saltoContador").value
-  );
-
+function funcaoGerar() {
+  var numeroTabuada = document.getElementById("numeroTabuada").value.trim();
+  var numeroT = 0;
+  var resultadoDiv = document.getElementById("resultadoDiv");
   var resultado = document.getElementById("resultado");
+  var resultadoTabuada = document.getElementById("resultadoTabuada");
+  var tabuada = "";
 
-  resultado.innerHTML = "";
-
-  if (saltoContador > 0) {
-    for (
-      let contador = inicioContador;
-      contador <= fimContador;
-      contador += saltoContador
-    ) {
-      resultado.innerHTML = resultado.innerHTML + contador;
-
-      if (contador + saltoContador <= fimContador) {
-        resultado.innerHTML = resultado.innerHTML + " &#10145; ";
-      }
+  if (numeroTabuada === "") {
+    alert("Por favor, digite um número!");
+    resultado.innerHTML = "Por favor, digite um número!";
+    resultadoDiv.style.background = "#E82D4D";
+  } else if (!isNaN(numeroTabuada)) {
+    while (numeroT <= 10) {
+      tabuada += `${numeroTabuada} X ${numeroT} = ${numeroTabuada * numeroT}\n`;
+      numeroT++;
     }
+    resultadoTabuada.value = tabuada;
+    resultado.innerHTML = `Tabuada do número ${numeroTabuada} gerada!`;
+    resultadoDiv.style.background = "#2EFFB7";
   } else {
-    resultado.innerHTML = "O valor do salto deve ser maior que zero.";
+    alert("Por favor, digite um número válido!");
+    resultado.innerHTML = "Por favor, digite um número válido!";
+    resultadoDiv.style.background = "#E82D4D";
   }
 }

@@ -37,11 +37,12 @@ main {
 form input,
 label {
   margin-left: 0.2rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   padding: 0.3rem;
   border-radius: 0.5rem;
   max-width: 12rem;
-  font-size: 1rem;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
 }
 
 form input:hover,
@@ -51,7 +52,7 @@ form input:active {
 
 button {
   padding: 0.5rem;
-  margin: 1rem 0 2rem 0;
+  margin: 0rem 0 1rem 0;
   background-color: #0388a6;
   color: #d9b26a;
   font-size: 1rem;
@@ -65,6 +66,12 @@ button:hover {
   color: #d9b26a;
   font-weight: 900;
   box-shadow: 0.1rem 0.1rem 0.9rem 0.1rem rgba(0, 0, 0, 0.356);
+}
+
+textarea {
+  padding: 1rem;
+  max-width: 10rem;
+  height: 14rem;
 }
 
 #resultadoDiv {
